@@ -2,16 +2,11 @@ package pom;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage{
 
     @FindBy(id = "menu-item-2008")
-    public WebElement titleComicsLocatorNotCached;
-
-    @FindBy(id = "menu-item-2008")
-    @CacheLookup
     public WebElement titleComicsLocator;
 
     private String titleHomePage = "imalittletester – Testing. With Java, Selenium, TestNG, Maven, Spring, IntelliJ and friends.";

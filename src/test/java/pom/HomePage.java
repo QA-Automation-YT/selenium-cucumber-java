@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class HomePage extends BasePage{
 
     @FindBy(id = "menu-item-2008")
-    public WebElement titleComicsLocator;
+    private WebElement titleComicsLocator;
 
     private String titleHomePage = "imalittletester – Testing. With Java, Selenium, TestNG, Maven, Spring, IntelliJ and friends.";
 

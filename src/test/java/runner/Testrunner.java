@@ -8,7 +8,8 @@ import org.junit.runner.RunWith;
 
 @CucumberOptions(
         features = "src/test/java/features",
-        glue = {"seleniumgluecode"}
+        glue = {"seleniumgluecode"},
+        plugin = {"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:resources/cucumber-reports/report.html"}
 )
 
 public class Testrunner {

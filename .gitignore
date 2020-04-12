@@ -2,3 +2,5 @@
 target/
 resources/
 Cucumber_Selenium.iml
+node_modules/
+test/

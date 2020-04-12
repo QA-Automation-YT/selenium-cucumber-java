@@ -1,0 +1,22 @@
+{
+  "name": "selenium-cucumber-java",
+  "version": "1.0.0",
+  "description": "UI Automation Framework using Selenium WebDriver, Cucumber and Java",
+  "main": "index.js",
+  "scripts": {
+    "report": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QA-Automation-YT/selenium-cucumber-java.git"
+  },
+  "author": "Santiago Sosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QA-Automation-YT/selenium-cucumber-java/issues"
+  },
+  "homepage": "https://github.com/QA-Automation-YT/selenium-cucumber-java#readme",
+  "devDependencies": {
+    "multiple-cucumber-html-reporter": "^1.16.1"
+  }
+}

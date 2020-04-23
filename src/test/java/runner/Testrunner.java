@@ -11,7 +11,6 @@ import org.junit.runner.RunWith;
         features = "src/test/java/features",
         glue = {"seleniumgluecode"},
         plugin = {"json:test/report/cucumber_report.json"}
-
 )
 
 public class Testrunner {
@@ -19,7 +18,7 @@ public class Testrunner {
     @AfterClass
     public static void finish(){
         try {
-            System.out.println("Generado reporte");
+            System.out.println("Generando reporte...");
             String[] cmd = {"cmd.exe", "/c", "npm run report"};
             Runtime.getRuntime().exec(cmd);
             System.out.println("Reporte generado satisfactoriamente!");

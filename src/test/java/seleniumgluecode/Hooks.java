@@ -3,6 +3,7 @@ package seleniumgluecode;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import org.junit.BeforeClass;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +16,7 @@ public class Hooks {
     private static WebDriver driver;
     private DriverManager driverManager;
 
-    @Before
+    @Before("@browser")
     public void setUp(){
         driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
         driver = driverManager.getDriver();
@@ -23,7 +24,7 @@ public class Hooks {
         driver.manage().window().maximize();
     }
 
-    @After
+    @After("@browser")
     public void tearDown(Scenario scenario){
         if(scenario.isFailed()){
             byte[] screenshot = ((TakesScreenshot)driverManager.getDriver()).getScreenshotAs(OutputType.BYTES);

@@ -1,6 +1,7 @@
 package runner;
 
 import cucumber.api.CucumberOptions;
+import cucumber.api.SnippetType;
 import cucumber.api.junit.Cucumber;
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
@@ -10,7 +11,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/features",
         glue = {"seleniumgluecode"},
-        plugin = {"json:test/report/cucumber_report.json"}
+        plugin = {"json:test/report/cucumber_report.json"},
+        snippets = SnippetType.CAMELCASE
 )
 
 public class Testrunner {

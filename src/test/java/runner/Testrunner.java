@@ -12,7 +12,8 @@ import org.junit.runner.RunWith;
         features = "src/test/java/features",
         glue = {"seleniumgluecode"},
         plugin = {"json:test/report/cucumber_report.json"},
-        snippets = SnippetType.CAMELCASE
+        snippets = SnippetType.CAMELCASE,
+        tags = {"@functional"}
 )
 
 public class Testrunner {

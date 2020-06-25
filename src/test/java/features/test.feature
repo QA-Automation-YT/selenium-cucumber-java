@@ -8,6 +8,7 @@ Feature: Categoria Comics
     When    Hace click sobre el titulo The little tester comics
     Then    Se debe redirigir a la pantalla Comics
 
+
   @math
   Scenario Outline: Bebiendo
     Given Hay <inicio> cervezas

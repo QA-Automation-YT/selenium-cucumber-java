@@ -27,8 +27,7 @@ Feature: Categoria Comics
     """
     Teoria de la tierra en forma de rosquilla
     =================
-    Este es primer parrafo
-    asasasasa
+    Este es el primer parrafo
     """
 
   Scenario: Data table

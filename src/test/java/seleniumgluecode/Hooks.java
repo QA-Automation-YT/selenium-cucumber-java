@@ -29,6 +29,7 @@ public class Hooks {
 
         ************************************************************ */
 
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://imalittletester.com/");
         driver.manage().window().maximize();
     }

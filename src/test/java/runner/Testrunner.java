@@ -9,7 +9,6 @@ import utils.LogHelper;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 @RunWith(Cucumber.class)
 
 @CucumberOptions(
@@ -22,10 +21,11 @@ import java.util.logging.Logger;
 
 public class Testrunner {
 
-    private static final Logger LOGGER = LogHelper.getLogger();
+    private static final Logger LOGGER = LogHelper.getLogger(Testrunner.class);
+
 
     @AfterClass
-    public static void finish(){
+    public static void teardown(){
         try {
             LOGGER.log(Level.INFO, "Generando reporte...");
             String[] cmd = {"cmd.exe", "/c", "npm run report"};

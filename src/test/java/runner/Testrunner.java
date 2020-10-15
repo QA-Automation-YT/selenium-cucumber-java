@@ -3,26 +3,31 @@ package runner;
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
 import cucumber.api.junit.Cucumber;
+import db.MongoDBHelper;
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import utils.LogHelper;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @RunWith(Cucumber.class)
-
 @CucumberOptions(
-        features = "src/test/java/features",
+        features = "src/test/java/features/",
         glue = {"seleniumgluecode"},
         plugin = {"json:test/report/cucumber_report.json"},
         snippets = SnippetType.CAMELCASE,
-        tags = {"~@browser"}
+        tags = {"~@browser", "~@backend"}
 )
 
 public class Testrunner {
 
     private static final Logger LOGGER = LogHelper.getLogger(Testrunner.class);
 
+    @BeforeClass()
+    public static void setUp(){
+        LOGGER.log(Level.INFO, "Comienza la ejecución de las pruebas...");
+    }
 
     @AfterClass
     public static void teardown(){

@@ -3,6 +3,7 @@ package seleniumgluecode;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import db.MongoDBHelper;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -32,6 +33,11 @@ public class Hooks {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://imalittletester.com/");
         driver.manage().window().maximize();
+    }
+
+    @Before("@backend")
+    public void connectToMongoServer(){
+        MongoDBHelper.connectToServer();
     }
 
     @After("@browser")

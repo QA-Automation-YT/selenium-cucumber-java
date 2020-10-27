@@ -3,7 +3,6 @@ package runner;
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
 import cucumber.api.junit.Cucumber;
-import db.MongoDBHelper;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
@@ -17,7 +16,7 @@ import java.util.logging.Logger;
         glue = {"seleniumgluecode"},
         plugin = {"json:test/report/cucumber_report.json"},
         snippets = SnippetType.CAMELCASE,
-        tags = {"~@browser", "~@backend"}
+        tags = {"@backend"}
 )
 
 public class Testrunner {

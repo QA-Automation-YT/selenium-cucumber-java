@@ -16,7 +16,7 @@ public class BasePage {
         try {
             driver.findElement(element).click();
         }catch (Exception e){
-            throw new Exception("No se pudo clickear sobre el boton " + element);
+            throw new Exception("Could not click on the button " + element);
         }
     }
 
@@ -24,7 +24,7 @@ public class BasePage {
         try {
             element.click();
         }catch (Exception e){
-            throw new Exception("No se pudo clickear sobre el boton " + element);
+            throw new Exception("Could not click on the button " + element);
         }
     }
 
@@ -32,7 +32,7 @@ public class BasePage {
         try {
             return driver.findElement(element).isDisplayed();
         }catch (Exception e){
-            throw new Exception("El elemento " + element + " no es visible en el DOM");
+            throw new Exception("The element " + element + " is not visible in the DOM");
         }
     }
 
@@ -40,7 +40,7 @@ public class BasePage {
         try {
             return element.isDisplayed();
         }catch (Exception e){
-            throw new Exception("El elemento " + element + " no es visible en el DOM");
+            throw new Exception("The element " + element + " is not visible in the DOM");
         }
     }
 
@@ -48,7 +48,7 @@ public class BasePage {
         try {
             return driver.findElement(element).getText();
         }catch (Exception e){
-            throw new Exception("No se pudo obtener el texto del elemento: " + element);
+            throw new Exception("Could not get the text of the following element: " + element);
         }
 
     }
@@ -57,7 +57,7 @@ public class BasePage {
         try {
             return element.getText();
         }catch (Exception e){
-            throw new Exception("No se pudo obtener el texto del elemento: " + element);
+            throw new Exception("Could not get the text of the following element: " + element);
         }
     }
 
@@ -65,7 +65,7 @@ public class BasePage {
         try {
             return driver.getTitle();
         }catch (Exception e){
-            throw new Exception("No se pudo obtener el titulo de la pestaña");
+            throw new Exception("Could not get the tab title");
         }
 
     }

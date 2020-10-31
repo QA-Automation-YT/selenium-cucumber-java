@@ -25,18 +25,18 @@ public class Testrunner {
 
     @BeforeClass()
     public static void setUp(){
-        LOGGER.log(Level.INFO, "Comienza la ejecución de las pruebas...");
+        LOGGER.log(Level.INFO, "Test execution begins...");
     }
 
     @AfterClass
     public static void teardown(){
         try {
-            LOGGER.log(Level.INFO, "Generando reporte...");
+            LOGGER.log(Level.INFO, "Generating report...");
             String[] cmd = {"cmd.exe", "/c", "npm run report"};
             Runtime.getRuntime().exec(cmd);
-            LOGGER.log(Level.INFO, "Reporte generado satisfactoriamente!");
+            LOGGER.log(Level.INFO, "Report successfully generated!");
         }catch (Exception ex){
-            LOGGER.log(Level.WARNING, "No se pudo generar el reporte.");
+            LOGGER.log(Level.WARNING, "The report could not be generated.");
             ex.printStackTrace();
         }
     }

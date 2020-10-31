@@ -21,7 +21,7 @@ public class MongoDBHelper {
     private static MongoClient mongoClient;
 
     /**
-     * Se conecta a un servidor y bbtiene un cliente de Mongo
+     * Se conecta a un servidor y obtiene un cliente de Mongo
      */
     public static void connectToServer() throws IOException {
 
